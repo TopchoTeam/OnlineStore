@@ -16,8 +16,9 @@ namespace OnlineStore.Models
         {
             this.Sales = new HashSet<Sale>();
         }
+        
         public int UserId { get; set; }
-        [MinLength(3),MaxLength(15)]
+        [MinLength(3), MaxLength(15)]
         public string UserName { get; set; }
         public string FirstName { get; set; }
         [Required]
@@ -26,8 +27,7 @@ namespace OnlineStore.Models
         public string Email { get; set; }
         [Required]
         public string Password { get; set; }
-        public int AccountId { get; set; }
-        [ForeignKey("AccountId")]
+        
         public virtual Account Account { get; set; }
         [Required]
         public string Address { get; set; }

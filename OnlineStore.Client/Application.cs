@@ -9,10 +9,10 @@
     {
         static void Main(string[] args)
         {
-            Engine engine = new Engine(new CommandDispatcher());
-            engine.Run();
-            //var con = new OnlineStoreContext();
-            //con.Database.Initialize(true);
+           // Engine engine = new Engine(new CommandDispatcher());
+            //engine.Run();
+            var con = new OnlineStoreContext();
+            con.Database.Initialize(true);
         }
     }
 }
