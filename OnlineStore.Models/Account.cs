@@ -6,7 +6,6 @@ namespace OnlineStore.Models
 
     public class Account
     {
-        [Key]
         public int AccountId { get; set; }
 
         [Required]

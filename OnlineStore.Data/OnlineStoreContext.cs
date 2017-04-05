@@ -18,10 +18,11 @@ namespace OnlineStore.Data
         public virtual DbSet<Sale> Sales { get; set; }
         public virtual DbSet<ProductSale> ProductSales { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+       protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+           // modelBuilder.Entity<User>().HasOptional(u => u.Account).WithOptionalDependent(a => a.User).WillCascadeOnDelete(false);
+            
             modelBuilder.Entity<User>().HasRequired(u => u.Account).WithOptional(a => a.User).WillCascadeOnDelete(false);
-
             base.OnModelCreating(modelBuilder);
         }
     }

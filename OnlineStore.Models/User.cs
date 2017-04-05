@@ -20,7 +20,7 @@ namespace OnlineStore.Models
         [Key]
         public int UserId { get; set; }
 
-        [MinLength(3),MaxLength(15)]
+        [MinLength(3), MaxLength(15)]
         public string UserName { get; set; }
 
         public string FirstName { get; set; }
