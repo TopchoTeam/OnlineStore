@@ -27,12 +27,12 @@
                     result += "\nDeleteUser"; //TODO
                     result += "\nListSales"; //TODO
                 }
-                result += "\nLogOut"; //TODO
+                result += "\nLogOut";
                 result += "\nExit";
             }
             else
             {
-                result += "RegisterUser"; //TODO
+                result += "RegisterUser";
                 result += "\nListCommands";
                 result += "\nListProducts"; //TODO
                 result += "\nLogIn";
