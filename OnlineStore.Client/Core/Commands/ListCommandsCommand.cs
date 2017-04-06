@@ -20,7 +20,7 @@
                 result += "\nTransferMoney"; //TODO
                 if (Authorization.Instance.CurrentUser.Role == UserRole.Admin)
                 {
-                    result += "\nAddProduct"; //TODO
+                    result += "\nAddProduct";
                     result += "\nAddSupplier"; //TODO
                     result += "\nEditProduct"; //TODO
                     result += "\nEditSupplier"; //TODO

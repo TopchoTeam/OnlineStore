@@ -13,6 +13,10 @@
 
             switch (command)
             {
+                case "editproduct":
+                    EditProductCommand editproduct = new EditProductCommand();
+                    result = editproduct.Execute();
+                    break;
 
                 case "addproduct":
                     AddProductCommand addProduct = new AddProductCommand();

@@ -13,9 +13,16 @@ namespace OnlineStore.Client.Core.Commands
     {
         public string Execute()
         {
-            string result = string.Empty;
-            if (Authorization.Instance.CurrentUser.Role == UserRole.Admin)
+            if (!Authorization.Instance.ValidateIsUserLoggedIn())
             {
+                throw new InvalidOperationException("You should log in first for this operation!");
+            }
+
+            if (Authorization.Instance.CurrentUser.Role != UserRole.Admin)
+            {
+                throw new InvalidOperationException("You don't have access to this operation!");
+            }
+                string result = string.Empty;
                 Console.Write("Enter product name: ");
                 string productName = Console.ReadLine().ToLower();
                 Console.Clear();
@@ -55,7 +62,7 @@ namespace OnlineStore.Client.Core.Commands
                     context.SaveChanges();
 
                     result = $"{productName} was added succesfully to database";
-                }
+                
             }
             return result;
         }
