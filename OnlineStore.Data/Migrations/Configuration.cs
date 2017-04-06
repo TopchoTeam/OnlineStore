@@ -52,7 +52,6 @@ namespace OnlineStore.Data.Migrations
 
             User admin = new User()
             {
-                UserId =1,
                 UserName = "Admin",
                 FirstName = "Admin",
                 LastName = "Adminov",
@@ -113,17 +112,9 @@ namespace OnlineStore.Data.Migrations
                 Account= account5
             };
             context.Users.AddOrUpdate(u => u.UserName, admin);
-            context.SaveChanges();
-
             context.Users.AddOrUpdate(u => u.UserName, gosho);
-            context.SaveChanges();
-
             context.Users.AddOrUpdate(u => u.UserName, pesho);
-            context.SaveChanges();
-
             context.Users.AddOrUpdate(u => u.UserName, anita);
-            context.SaveChanges();
-
             context.Users.AddOrUpdate(u => u.UserName, Maria);
             context.SaveChanges();
 
@@ -148,13 +139,9 @@ namespace OnlineStore.Data.Migrations
                 Name = "Dimitar Madgarov Ltd"
             };
             context.Suppliers.AddOrUpdate(s => s.Name, ivanET);
-            context.SaveChanges();
             context.Suppliers.AddOrUpdate(s => s.Name, tandem);
-            context.SaveChanges();
             context.Suppliers.AddOrUpdate(s => s.Name, boni);
-            context.SaveChanges();
             context.Suppliers.AddOrUpdate(s => s.Name, simid);
-            context.SaveChanges();
             context.Suppliers.AddOrUpdate(s => s.Name, madgarov);
             context.SaveChanges();
 

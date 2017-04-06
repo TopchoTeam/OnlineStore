@@ -22,7 +22,7 @@ namespace OnlineStore.Data
         {
            // modelBuilder.Entity<User>().HasOptional(u => u.Account).WithOptionalDependent(a => a.User).WillCascadeOnDelete(false);
             
-            modelBuilder.Entity<User>().HasRequired(u => u.Account).WithRequiredDependent(a => a.User).WillCascadeOnDelete(false);
+            modelBuilder.Entity<User>().HasRequired(u => u.Account).WithOptional(a => a.User).WillCascadeOnDelete(false);
             base.OnModelCreating(modelBuilder);
         }
     }

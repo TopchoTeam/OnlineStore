@@ -13,9 +13,23 @@
 
             switch (command)
             {
+
                 case "addproduct":
                     AddProductCommand addProduct = new AddProductCommand();
                     result = addProduct.Execute();
+                    break;
+                case "listproducts":
+                    ListProductsCommand listproducts = new ListProductsCommand();
+                    result = listproducts.Execute();
+                    break;
+                case "registeruser":
+                    RegisterUserCommand registeruser = new RegisterUserCommand();
+                    result = registeruser.Execute();
+                    break;
+                case "logout":
+                    LogOutCommand logout = new LogOutCommand();
+                    result = logout.Execute();
+
                     break;
                 case "login":
                     LogInCommand login = new LogInCommand();
