@@ -28,7 +28,6 @@
                 catch(Exception e)
                 {
                     Console.Clear();
-                    //Console.WriteLine($"Invalid Command!");
                     Console.WriteLine(e.Message);
                 }
             }

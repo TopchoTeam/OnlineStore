@@ -12,15 +12,15 @@
             {
                 result += "RegisterUser";
                 result += "\nListCommands";
-                result += "\nPurchaseProducts"; //TODO
-                result += "\nEditMyProfile"; //TODO
+                result += "\nPurchaseProducts"; //TODO Todor
+                result += "\nEditMyProfile"; //TODO Todor
                 result += "\nDeleteMyProfile"; //TODO
                 result += "\nViewMyPurchases"; //TODO
                 result += "\nListProducts";
                 result += "\nTransferMoney"; //TODO
                 if (Authorization.Instance.CurrentUser.Role == UserRole.Admin)
                 {
-                    result += "\nAddProduct"; //TODO
+                    result += "\nAddProduct";
                     result += "\nAddSupplier"; //TODO
                     result += "\nEditProduct"; //TODO
                     result += "\nEditSupplier"; //TODO
