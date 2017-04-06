@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Application.cs" />
     <Compile Include="Core\CommandDispatcher.cs" />
+    <Compile Include="Core\Commands\AddProductCommand.cs" />
     <Compile Include="Core\Commands\ExitCommand.cs" />
     <Compile Include="Core\Commands\ListCommandsCommand.cs" />
     <Compile Include="Core\Commands\LogInCommand.cs" />

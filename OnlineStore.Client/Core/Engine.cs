@@ -15,7 +15,7 @@
         {
             while (true)
             {
-                try
+              try
                 {
                     Console.WriteLine("Tip: To see available commands type \"ListCommands\"");
                     Console.Write("Enter Command: ");
@@ -25,10 +25,11 @@
                     Console.Clear();
                     Console.WriteLine(output);
                 }
-                catch
+                catch(Exception e)
                 {
                     Console.Clear();
-                    Console.WriteLine($"Invalid Command!");
+                    //Console.WriteLine($"Invalid Command!");
+                    Console.WriteLine(e.Message);
                 }
             }
         }

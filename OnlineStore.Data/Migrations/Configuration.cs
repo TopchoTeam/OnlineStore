@@ -164,7 +164,7 @@ namespace OnlineStore.Data.Migrations
                 Price = 0.98m,
                 Quantity = 5,
                 Unit = "prs",
-                Supplier = simid
+                SupplierId = simid.SupplierId
             };
             Product yellowCheeseBoni = new Product()
             {
@@ -172,7 +172,7 @@ namespace OnlineStore.Data.Migrations
                 Price = 11.20m,
                 Quantity = 4,
                 Unit = "kg",
-                Supplier = boni
+                SupplierId = boni.SupplierId
             };
             Product beconMadgarov = new Product()
             {
@@ -180,7 +180,7 @@ namespace OnlineStore.Data.Migrations
                 Price = 16.70m,
                 Quantity = 2,
                 Unit = "kg",
-                Supplier = madgarov
+                SupplierId = madgarov.SupplierId
             };
             Product whiteCheeseMadgarov = new Product()
             {
@@ -188,7 +188,7 @@ namespace OnlineStore.Data.Migrations
                 Price = 12.50m,
                 Quantity = 14,
                 Unit = "kg",
-                Supplier = madgarov
+                SupplierId = madgarov.SupplierId
             };
             Product sausageTandem = new Product()
             {
@@ -196,7 +196,7 @@ namespace OnlineStore.Data.Migrations
                 Price = 6.90m,
                 Quantity = 6,
                 Unit = "kg",
-                Supplier = tandem
+                SupplierId = tandem.SupplierId
             };
             Product tomatoIvanov = new Product()
             {
@@ -204,7 +204,7 @@ namespace OnlineStore.Data.Migrations
                 Price = 4.00m,
                 Quantity = 12,
                 Unit = "kg",
-                Supplier = ivanET
+                SupplierId = ivanET.SupplierId
             };
             Product potatoIvanov = new Product()
             {
@@ -212,7 +212,7 @@ namespace OnlineStore.Data.Migrations
                 Price = 0.60m,
                 Quantity = 50,
                 Unit = "kg",
-                Supplier = ivanET
+                SupplierId = ivanET.SupplierId
             };
             context.Products.AddOrUpdate(p => p.Name, breadSimid);
             context.Products.AddOrUpdate(p => p.Name, sausageTandem);
