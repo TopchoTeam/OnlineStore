@@ -56,6 +56,7 @@
     <Compile Include="Core\CommandDispatcher.cs" />
     <Compile Include="Core\Commands\AddProductCommand.cs" />
     <Compile Include="Core\Commands\EditProductCommand.cs" />
+    <Compile Include="Core\Commands\EditMyProfileCommand.cs" />
     <Compile Include="Core\Commands\ExitCommand.cs" />
     <Compile Include="Core\Commands\ListCommandsCommand.cs" />
     <Compile Include="Core\Commands\ListProductsCommand.cs" />

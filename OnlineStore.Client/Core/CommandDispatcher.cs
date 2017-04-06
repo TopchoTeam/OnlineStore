@@ -13,9 +13,16 @@
 
             switch (command)
             {
+
                 case "editproduct":
                     EditProductCommand editproduct = new EditProductCommand();
                     result = editproduct.Execute();
+                    break;
+
+
+                case "editmyprofile":
+                    EditMyProfileCommand editmyprofile = new EditMyProfileCommand();
+                    result = editmyprofile.Execute();
                     break;
 
                 case "addproduct":

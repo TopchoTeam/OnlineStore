@@ -12,8 +12,8 @@
             {
                 result += "RegisterUser";
                 result += "\nListCommands";
-                result += "\nPurchaseProducts"; //TODO
-                result += "\nEditMyProfile"; //TODO
+                result += "\nPurchaseProducts"; //TODO Todor
+                result += "\nEditMyProfile"; //TODO Todor
                 result += "\nDeleteMyProfile"; //TODO
                 result += "\nViewMyPurchases"; //TODO
                 result += "\nListProducts";
