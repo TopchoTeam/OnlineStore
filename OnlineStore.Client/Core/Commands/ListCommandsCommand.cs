@@ -10,13 +10,13 @@
             
             if (Authorization.Instance.ValidateIsUserLoggedIn())
             {
-                result += "ListCommands";
+                result += "RegisterUser";
+                result += "\nListCommands";
                 result += "\nPurchaseProducts"; //TODO
                 result += "\nEditMyProfile"; //TODO
                 result += "\nDeleteMyProfile"; //TODO
                 result += "\nViewMyPurchases"; //TODO
-                result += "\nListProducts"; //TODO
-                result += "\nEditPurchase"; //TODO
+                result += "\nListProducts";
                 result += "\nTransferMoney"; //TODO
                 if (Authorization.Instance.CurrentUser.Role == UserRole.Admin)
                 {
@@ -34,7 +34,7 @@
             {
                 result += "RegisterUser";
                 result += "\nListCommands";
-                result += "\nListProducts"; //TODO
+                result += "\nListProducts";
                 result += "\nLogIn";
                 result += "\nExit";
             }

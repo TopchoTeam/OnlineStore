@@ -16,7 +16,7 @@
 
             foreach (var u in users)
             {
-                System.Console.WriteLine($"{u.Account.AccountNumber} {u.UserName} {u.Account.Balance}");
+                System.Console.WriteLine($"{u.Account.AccountNumber} {u.UserName} {u.Account.Balance} {u.Account.AccountId}");
             }*/
         }
     }

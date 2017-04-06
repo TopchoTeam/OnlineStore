@@ -13,6 +13,10 @@
 
             switch (command)
             {
+                case "listproducts":
+                    ListProductsCommand listproducts = new ListProductsCommand();
+                    result = listproducts.Execute();
+                    break;
                 case "registeruser":
                     RegisterUserCommand registeruser = new RegisterUserCommand();
                     result = registeruser.Execute();
