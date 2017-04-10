@@ -17,6 +17,10 @@
                     PurchaseProductsCommand purchaseproducts = new PurchaseProductsCommand();
                     result = purchaseproducts.Execute();
                     break;
+                case "editproduct":
+                    EditProductCommand editproduct = new EditProductCommand();
+                    result = editproduct.Execute();
+                    break;
                 case "editmyprofile":
                     EditMyProfileCommand editmyprofile = new EditMyProfileCommand();
                     result = editmyprofile.Execute();
