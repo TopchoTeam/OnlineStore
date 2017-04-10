@@ -13,6 +13,19 @@
 
             switch (command)
             {
+
+                case "listsuppliers":
+                    ListSuppliersCommand listsuppliers = new ListSuppliersCommand();
+                    result = listsuppliers.Execute();
+                    break;
+                case "editsupplier":
+                    EditSupplierCommand editsupplier = new EditSupplierCommand();
+                    result = editsupplier.Execute();
+                    break;
+                case "addsupplier":
+                    AddSupplierCommand addsupplier = new AddSupplierCommand();
+                    result = addsupplier.Execute();
+                    break;
                 case "purchaseproducts":
                     PurchaseProductsCommand purchaseproducts = new PurchaseProductsCommand();
                     result = purchaseproducts.Execute();
@@ -40,7 +53,6 @@
                 case "logout":
                     LogOutCommand logout = new LogOutCommand();
                     result = logout.Execute();
-
                     break;
                 case "login":
                     LogInCommand login = new LogInCommand();

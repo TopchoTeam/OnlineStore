@@ -21,9 +21,10 @@
                 if (Authorization.Instance.CurrentUser.Role == UserRole.Admin)
                 {
                     result += "\nAddProduct";
-                    result += "\nAddSupplier"; //TODO
+                    result += "\nAddSupplier"; 
                     result += "\nEditProduct"; 
-                    result += "\nEditSupplier"; //TODO
+                    result += "\nEditSupplier";
+                    result += "\nListSupplier";
                     result += "\nDeleteUser"; //TODO
                     result += "\nListSales"; //TODO
                 }
