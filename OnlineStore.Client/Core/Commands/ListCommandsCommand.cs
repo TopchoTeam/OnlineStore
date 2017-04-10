@@ -13,7 +13,7 @@
                 result += "RegisterUser";
                 result += "\nListCommands";
                 result += "\nPurchaseProducts"; //TODO Todor
-                result += "\nEditMyProfile"; //TODO Todor
+                result += "\nEditMyProfile"; 
                 result += "\nDeleteMyProfile"; //TODO
                 result += "\nViewMyPurchases"; //TODO
                 result += "\nListProducts";
@@ -21,9 +21,10 @@
                 if (Authorization.Instance.CurrentUser.Role == UserRole.Admin)
                 {
                     result += "\nAddProduct";
-                    result += "\nAddSupplier"; //TODO
-                    result += "\nEditProduct"; //TODO
-                    result += "\nEditSupplier"; //TODO
+                    result += "\nAddSupplier"; 
+                    result += "\nEditProduct"; 
+                    result += "\nEditSupplier";
+                    result += "\nListSupplier";
                     result += "\nDeleteUser"; //TODO
                     result += "\nListSales"; //TODO
                 }

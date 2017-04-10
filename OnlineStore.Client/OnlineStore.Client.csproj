@@ -55,11 +55,14 @@
     <Compile Include="Application.cs" />
     <Compile Include="Core\CommandDispatcher.cs" />
     <Compile Include="Core\Commands\AddProductCommand.cs" />
+    <Compile Include="Core\Commands\AddSupplierCommand.cs" />
     <Compile Include="Core\Commands\EditProductCommand.cs" />
     <Compile Include="Core\Commands\EditMyProfileCommand.cs" />
+    <Compile Include="Core\Commands\EditSupplierCommand.cs" />
     <Compile Include="Core\Commands\ExitCommand.cs" />
     <Compile Include="Core\Commands\ListCommandsCommand.cs" />
     <Compile Include="Core\Commands\ListProductsCommand.cs" />
+    <Compile Include="Core\Commands\ListSuppliersCommand.cs" />
     <Compile Include="Core\Commands\LogInCommand.cs" />
     <Compile Include="Core\Commands\LogOutCommand.cs" />
     <Compile Include="Core\Commands\RegisterUserCommand.cs" />
