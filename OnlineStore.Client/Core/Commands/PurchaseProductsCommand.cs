@@ -24,6 +24,7 @@
                 sale.OrderDate = DateTime.Now;
                 sale.IsDelivered = false;
                 sale.UserId = user.UserId;
+                Dictionary<string, int> original = new Dictionary<string, int>();
                 Console.Clear();
                 Console.WriteLine("Tip: If you want to stop adding products type \"Stop\"");
                 Console.Write("Enter product name: ");
@@ -36,12 +37,21 @@
                     if (context.Products.Any(p => p.Name.ToLower() == productName && p.Quantity >= quantity))
                     {
                         Product product = context.Products.FirstOrDefault(p => p.Name.ToLower() == productName);
-                        ProductSale proSale = new ProductSale();
-                        proSale.ProductId = product.ProductId;
-                        proSale.OrderedQuantity = quantity;
-                        sale.Products.Add(proSale);
-                        sale.TotalSum += quantity * product.Price;
-                        product.Quantity = product.Quantity - quantity;
+                        if (sale.Products.Any(p => p.ProductId == product.ProductId))
+                        {
+                            sale.Products.FirstOrDefault(p => p.ProductId == product.ProductId).OrderedQuantity += quantity;
+                            sale.TotalSum += quantity * product.Price;
+                        }
+                        else
+                        {
+                            ProductSale proSale = new ProductSale();
+                            proSale.ProductId = product.ProductId;
+                            proSale.OrderedQuantity = quantity;
+                            sale.Products.Add(proSale);
+                            sale.TotalSum += quantity * product.Price;
+                            original.Add(product.Name, product.Quantity);
+                        }
+                        ChangeProductQuantity(productName, quantity);
                     }
                     else
                     {
@@ -58,6 +68,7 @@
                 {
                     if (sale.TotalSum > user.Account.Balance)
                     {
+                        RestoreProductOriginalQuantity(original);
                         throw new InvalidProgramException("Insufficient account balance.");
                     }
                     User admin = context.Users.FirstOrDefault(u => u.UserName == "Admin");
@@ -69,11 +80,35 @@
                 }
                 else
                 {
+                    RestoreProductOriginalQuantity(original);
                     result = "Sale terminated.";
                 }
             }
 
             return result;
+        }
+
+        private void RestoreProductOriginalQuantity(Dictionary<string, int> original)
+        {
+            using(OnlineStoreContext context = new OnlineStoreContext())
+            {
+                foreach (var p in original)
+                {
+                    Product pr = context.Products.FirstOrDefault(e => e.Name == p.Key);
+                    pr.Quantity = p.Value;
+                }
+                context.SaveChanges();
+            }
+        }
+
+        private void ChangeProductQuantity(string productName, int quantity)
+        {
+            using(OnlineStoreContext context = new OnlineStoreContext())
+            {
+                Product pro = context.Products.FirstOrDefault(p => p.Name.ToLower() == productName);
+                pro.Quantity -= quantity;
+                context.SaveChanges();
+            }
         }
     }
 }

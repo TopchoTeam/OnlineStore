@@ -1,14 +1,11 @@
-﻿using OnlineStore.Client.Utilities;
-using OnlineStore.Data;
-using OnlineStore.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnlineStore.Client.Core.Commands
+﻿namespace OnlineStore.Client.Core.Commands
 {
+    using Utilities;
+    using Data;
+    using Models;
+    using System;
+    using System.Linq;
+
     public class EditProductCommand
     {
         public string Execute()
@@ -25,8 +22,8 @@ namespace OnlineStore.Client.Core.Commands
             string result = string.Empty;
             Console.Clear();
             Console.Write("Enter product name: ");
-
             string productName = Console.ReadLine().ToLower();
+
             using (var context = new OnlineStoreContext())
             {
                 var productByName = context.Products.FirstOrDefault(p => p.Name.ToLower() == productName);
@@ -35,6 +32,7 @@ namespace OnlineStore.Client.Core.Commands
                     throw new Exception($"Product {productName} does not exist in database!");
                 }
                 Console.Clear();
+                Console.WriteLine("Tip: you can change Price/Unit/Quantity/Supplier.");
                 Console.Write("Enter product property: ");
                
                 string productProperty = Console.ReadLine().ToLower();
@@ -52,16 +50,13 @@ namespace OnlineStore.Client.Core.Commands
                         Console.Write("Enter new product unit: ");                     
                         string productUnit = Console.ReadLine().ToLower();
                         productByName.Unit = productUnit;
-
                         break;
-
                     case "quantity":
                         Console.Clear();
                         Console.Write("Enter new product quantity: ");                       
                         int productQuantity = int.Parse(Console.ReadLine());
                         productByName.Quantity = productQuantity;
                         break;
-
                     case "supplier":
                         Console.Clear();
                         Console.Write("Enter new supplier: ");                        
@@ -73,15 +68,13 @@ namespace OnlineStore.Client.Core.Commands
                         }
                         productByName.SupplierId = supplierByName.SupplierId;
                         break;
-
                     default:
                         break;
                 }
                 context.SaveChanges();
                 result = $"Product {productProperty} was edited successfully!";
             }
-
-
+            
             return result;
         }
     }

@@ -12,7 +12,7 @@
             {
                 result += "RegisterUser";
                 result += "\nListCommands";
-                result += "\nPurchaseProducts"; //TODO Todor
+                result += "\nPurchaseProducts";
                 result += "\nEditMyProfile"; 
                 result += "\nDeleteMyProfile"; //TODO
                 result += "\nViewMyPurchases"; //TODO
@@ -22,7 +22,7 @@
                 {
                     result += "\nAddProduct";
                     result += "\nAddSupplier"; //TODO
-                    result += "\nEditProduct"; //TODO
+                    result += "\nEditProduct"; 
                     result += "\nEditSupplier"; //TODO
                     result += "\nDeleteUser"; //TODO
                     result += "\nListSales"; //TODO
