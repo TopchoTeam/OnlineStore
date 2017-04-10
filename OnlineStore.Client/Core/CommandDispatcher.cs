@@ -13,6 +13,7 @@
 
             switch (command)
             {
+
                 case "listsuppliers":
                     ListSuppliersCommand listsuppliers = new ListSuppliersCommand();
                     result = listsuppliers.Execute();
@@ -24,6 +25,10 @@
                 case "addsupplier":
                     AddSupplierCommand addsupplier = new AddSupplierCommand();
                     result = addsupplier.Execute();
+                    break;
+                case "purchaseproducts":
+                    PurchaseProductsCommand purchaseproducts = new PurchaseProductsCommand();
+                    result = purchaseproducts.Execute();
                     break;
                 case "editproduct":
                     EditProductCommand editproduct = new EditProductCommand();
