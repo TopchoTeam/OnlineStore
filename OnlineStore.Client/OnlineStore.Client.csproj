@@ -61,6 +61,7 @@
     <Compile Include="Core\Commands\ListProductsCommand.cs" />
     <Compile Include="Core\Commands\LogInCommand.cs" />
     <Compile Include="Core\Commands\LogOutCommand.cs" />
+    <Compile Include="Core\Commands\PurchaseProductsCommand.cs" />
     <Compile Include="Core\Commands\RegisterUserCommand.cs" />
     <Compile Include="Core\Engine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

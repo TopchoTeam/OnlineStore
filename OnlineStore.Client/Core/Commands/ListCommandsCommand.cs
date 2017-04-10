@@ -13,7 +13,7 @@
                 result += "RegisterUser";
                 result += "\nListCommands";
                 result += "\nPurchaseProducts"; //TODO Todor
-                result += "\nEditMyProfile"; //TODO Todor
+                result += "\nEditMyProfile"; 
                 result += "\nDeleteMyProfile"; //TODO
                 result += "\nViewMyPurchases"; //TODO
                 result += "\nListProducts";
