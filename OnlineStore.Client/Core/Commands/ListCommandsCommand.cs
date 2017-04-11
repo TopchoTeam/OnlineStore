@@ -12,7 +12,7 @@
             {
                 result += "RegisterUser";
                 result += "\nListCommands";
-                result += "\nPurchaseProducts"; //TODO Todor
+                result += "\nPurchaseProducts";
                 result += "\nEditMyProfile"; 
                 result += "\nDeleteMyProfile";
                 result += "\nViewMyPurchases"; //TODO
