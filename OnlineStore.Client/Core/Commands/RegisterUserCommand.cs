@@ -9,7 +9,7 @@
     {
         public string Execute()
         {
-            
+            Console.Clear();
             Console.Write("Enter Username: ");
             string username = Console.ReadLine();
             Console.Clear();

@@ -13,7 +13,10 @@
 
             switch (command)
             {
-
+                case "edituser":
+                    EditUserCommand edituser = new EditUserCommand();
+                    result = edituser.Execute();
+                    break;
                 case "listsuppliers":
                     ListSuppliersCommand listsuppliers = new ListSuppliersCommand();
                     result = listsuppliers.Execute();

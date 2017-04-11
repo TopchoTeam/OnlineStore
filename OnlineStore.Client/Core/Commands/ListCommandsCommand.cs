@@ -26,6 +26,8 @@
                     result += "\nEditSupplier";
                     result += "\nListSupplier";
                     result += "\nDeleteUser"; //TODO
+                    result += "\nActivateUser??????"; //TODO
+                    result += "\nEditUser"; 
                     result += "\nListSales"; //TODO
                 }
                 result += "\nLogOut";
