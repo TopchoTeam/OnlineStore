@@ -14,7 +14,7 @@
                 result += "\nListCommands";
                 result += "\nPurchaseProducts";
                 result += "\nEditMyProfile"; 
-                result += "\nDeleteMyProfile"; //TODO
+                result += "\nDeleteMyProfile";
                 result += "\nViewMyPurchases"; //TODO
                 result += "\nListProducts";
                 result += "\nTransferMoney"; //TODO
@@ -25,9 +25,9 @@
                     result += "\nEditProduct"; 
                     result += "\nEditSupplier";
                     result += "\nListSupplier";
-                    result += "\nDeleteUser"; //TODO
-                    result += "\nActivateUser??????"; //TODO
+                    result += "\nActivateUser"; //TODO
                     result += "\nEditUser"; 
+                    result += "\nDeleteUser";
                     result += "\nListSales"; //TODO
                 }
                 result += "\nLogOut";
