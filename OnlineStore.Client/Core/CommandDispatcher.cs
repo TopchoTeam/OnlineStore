@@ -14,6 +14,14 @@
             switch (command)
             {
 
+                case "deletemyprofile":
+                    DeleteMyProfileCommand deleteMyProfile = new DeleteMyProfileCommand();
+                    result = deleteMyProfile.Execute();
+                    break;
+                case "deleteuser":
+                    DeleteUserCommand deleteUser = new DeleteUserCommand();
+                    result = deleteUser.Execute();
+                    break;
                 case "listsuppliers":
                     ListSuppliersCommand listsuppliers = new ListSuppliersCommand();
                     result = listsuppliers.Execute();
