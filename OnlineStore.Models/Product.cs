@@ -10,6 +10,7 @@ namespace OnlineStore.Models
         public Product()
         {
             this.Sales = new HashSet<ProductSale>();
+            this.Deliveries = new HashSet<ProductDelivery>();
         }
         public int ProductId { get; set; }
         [Required]
@@ -23,7 +24,7 @@ namespace OnlineStore.Models
         public int SupplierId { get; set; }
         [ForeignKey("SupplierId")]
         public virtual Supplier Supplier { get; set; }
-        public decimal? DeliveryPrice { get; set; }
+        public decimal DeliveryPrice { get; set; }
         public virtual ICollection<ProductSale> Sales { get; set; }
         public virtual ICollection<ProductDelivery> Deliveries { get; set; }
 

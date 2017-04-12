@@ -42,6 +42,7 @@
                         {
                             sale.Products.FirstOrDefault(p => p.Product.ProductId == product.ProductId).OrderedQuantity += quantity;
                             sale.TotalSum += quantity * product.Price;
+                            sale.Profit += (product.Price - product.DeliveryPrice) * quantity;
                         }
                         else
                         {
@@ -50,6 +51,7 @@
                             proSale.OrderedQuantity = quantity;
                             sale.Products.Add(proSale);
                             sale.TotalSum += quantity * product.Price;
+                            sale.Profit += (product.Price - product.DeliveryPrice) * quantity;
                             original.Add(product.Name, product.Quantity);
                         }
                         ChangeProductQuantity(productName, quantity);

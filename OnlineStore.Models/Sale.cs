@@ -22,5 +22,6 @@ namespace OnlineStore.Models
         public bool IsDelivered { get; set; }
         [Required]
         public DateTime OrderDate { get; set; }
+        public decimal Profit { get; set; }
     }
 }

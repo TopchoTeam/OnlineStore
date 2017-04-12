@@ -67,6 +67,10 @@
     <Compile Include="Migrations\201704121157529_AddedDeliveryEntity.Designer.cs">
       <DependentUpon>201704121157529_AddedDeliveryEntity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704121658089_AddProfitColumn.cs" />
+    <Compile Include="Migrations\201704121658089_AddProfitColumn.Designer.cs">
+      <DependentUpon>201704121658089_AddProfitColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OnlineStoreContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704121157529_AddedDeliveryEntity.resx">
       <DependentUpon>201704121157529_AddedDeliveryEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704121658089_AddProfitColumn.resx">
+      <DependentUpon>201704121658089_AddProfitColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
