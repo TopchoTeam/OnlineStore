@@ -61,6 +61,7 @@
     <Compile Include="Core\Commands\EditProductCommand.cs" />
     <Compile Include="Core\Commands\EditMyProfileCommand.cs" />
     <Compile Include="Core\Commands\EditSupplierCommand.cs" />
+    <Compile Include="Core\Commands\EditUserCommand.cs" />
     <Compile Include="Core\Commands\ExitCommand.cs" />
     <Compile Include="Core\Commands\ListCommandsCommand.cs" />
     <Compile Include="Core\Commands\ListProductsCommand.cs" />

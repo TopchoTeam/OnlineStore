@@ -13,7 +13,10 @@
 
             switch (command)
             {
-
+                case "edituser":
+                    EditUserCommand edituser = new EditUserCommand();
+                    result = edituser.Execute();
+                    break;
                 case "deletemyprofile":
                     DeleteMyProfileCommand deleteMyProfile = new DeleteMyProfileCommand();
                     result = deleteMyProfile.Execute();

@@ -1,14 +1,11 @@
-﻿using OnlineStore.Client.Utilities;
-using OnlineStore.Data;
-using OnlineStore.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnlineStore.Client.Core.Commands
+﻿namespace OnlineStore.Client.Core.Commands
 {
+    using Utilities;
+    using Data;
+    using Models;
+    using System;
+    using System.Linq;
+
     public class AddSupplierCommand
     {
         public string Execute()
@@ -24,6 +21,7 @@ namespace OnlineStore.Client.Core.Commands
             }
 
             string result = string.Empty;
+            Console.Clear();
             Console.Write("Enter supplier name: ");
             string suppliertName = Console.ReadLine().ToLower();
             using(OnlineStoreContext context=new OnlineStoreContext())
