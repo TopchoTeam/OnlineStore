@@ -63,6 +63,10 @@
     <Compile Include="Migrations\201704051008390_changedForeinKey2.Designer.cs">
       <DependentUpon>201704051008390_changedForeinKey2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704121157529_AddedDeliveryEntity.cs" />
+    <Compile Include="Migrations\201704121157529_AddedDeliveryEntity.Designer.cs">
+      <DependentUpon>201704121157529_AddedDeliveryEntity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OnlineStoreContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704051008390_changedForeinKey2.resx">
       <DependentUpon>201704051008390_changedForeinKey2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704121157529_AddedDeliveryEntity.resx">
+      <DependentUpon>201704121157529_AddedDeliveryEntity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

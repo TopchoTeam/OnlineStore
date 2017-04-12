@@ -1,16 +1,14 @@
-﻿using OnlineStore.Client.Utilities;
+﻿
+namespace OnlineStore.Client.Core.Commands
+{
+using OnlineStore.Client.Utilities;
 using OnlineStore.Data;
 using OnlineStore.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnlineStore.Client.Core.Commands
-{
     public class DeleteMyProfileCommand
-    {        public string Execute()
+    {
+        public string Execute()
         {
             if (!Authorization.Instance.ValidateIsUserLoggedIn())
             {
@@ -28,10 +26,11 @@ namespace OnlineStore.Client.Core.Commands
                 }
                 user.IsDeleted = true;
                 context.SaveChanges();
+                Authorization.Instance.Logout();
                 result = $"User {user.UserName} deleted successfully!";
             }
-
             return result;
+          
         }
     }
 }
