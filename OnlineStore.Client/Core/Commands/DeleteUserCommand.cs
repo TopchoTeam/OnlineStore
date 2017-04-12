@@ -1,14 +1,11 @@
-﻿using OnlineStore.Client.Utilities;
+﻿
+namespace OnlineStore.Client.Core.Commands
+{
+using OnlineStore.Client.Utilities;
 using OnlineStore.Data;
 using OnlineStore.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnlineStore.Client.Core.Commands
-{
     public class DeleteUserCommand
     {
         public string Execute()

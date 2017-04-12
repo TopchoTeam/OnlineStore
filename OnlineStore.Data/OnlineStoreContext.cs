@@ -17,6 +17,8 @@ namespace OnlineStore.Data
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<Sale> Sales { get; set; }
         public virtual DbSet<ProductSale> ProductSales { get; set; }
+        public virtual DbSet<Delivery> Deliveries { get; set; }
+        public virtual DbSet<ProductDelivery> ProductDeliveries { get; set; }
 
        protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

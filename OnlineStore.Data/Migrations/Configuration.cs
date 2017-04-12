@@ -151,6 +151,7 @@ namespace OnlineStore.Data.Migrations
                 Price = 0.98m,
                 Quantity = 5,
                 Unit = "prs",
+                DeliveryPrice=0.95m,
                 SupplierId = simid.SupplierId
             };
             Product yellowCheeseBoni = new Product()
@@ -159,6 +160,7 @@ namespace OnlineStore.Data.Migrations
                 Price = 11.20m,
                 Quantity = 4,
                 Unit = "kg",
+                DeliveryPrice=9.80m,
                 SupplierId = boni.SupplierId
             };
             Product beconMadgarov = new Product()
@@ -167,6 +169,7 @@ namespace OnlineStore.Data.Migrations
                 Price = 16.70m,
                 Quantity = 2,
                 Unit = "kg",
+                DeliveryPrice=14.30m,
                 SupplierId = madgarov.SupplierId
             };
             Product whiteCheeseMadgarov = new Product()
@@ -175,6 +178,7 @@ namespace OnlineStore.Data.Migrations
                 Price = 12.50m,
                 Quantity = 14,
                 Unit = "kg",
+                DeliveryPrice=10.00m,
                 SupplierId = madgarov.SupplierId
             };
             Product sausageTandem = new Product()
@@ -183,6 +187,7 @@ namespace OnlineStore.Data.Migrations
                 Price = 6.90m,
                 Quantity = 6,
                 Unit = "kg",
+                DeliveryPrice=4.95m,
                 SupplierId = tandem.SupplierId
             };
             Product tomatoIvanov = new Product()
@@ -191,6 +196,7 @@ namespace OnlineStore.Data.Migrations
                 Price = 4.00m,
                 Quantity = 12,
                 Unit = "kg",
+                DeliveryPrice=3.30m,
                 SupplierId = ivanET.SupplierId
             };
             Product potatoIvanov = new Product()
@@ -199,6 +205,7 @@ namespace OnlineStore.Data.Migrations
                 Price = 0.60m,
                 Quantity = 50,
                 Unit = "kg",
+                DeliveryPrice=0.45m,
                 SupplierId = ivanET.SupplierId
             };
             context.Products.AddOrUpdate(p => p.Name, breadSimid);
