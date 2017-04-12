@@ -13,6 +13,10 @@
 
             switch (command)
             {
+                case "viewmypurchases":
+                    ViewMyPurchasesCommand viewmypurchases = new ViewMyPurchasesCommand();
+                    result = viewmypurchases.Execute();
+                    break;
                 case "edituser":
                     EditUserCommand edituser = new EditUserCommand();
                     result = edituser.Execute();

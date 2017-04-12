@@ -15,7 +15,7 @@
                 result += "\nPurchaseProducts";
                 result += "\nEditMyProfile"; 
                 result += "\nDeleteMyProfile";
-                result += "\nViewMyPurchases"; //TODO
+                result += "\nViewMyPurchases";
                 result += "\nListProducts";
                 result += "\nTransferMoney"; //TODO
                 if (Authorization.Instance.CurrentUser.Role == UserRole.Admin)

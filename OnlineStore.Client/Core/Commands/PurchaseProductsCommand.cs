@@ -21,7 +21,7 @@
             {
                 User user = context.Users.FirstOrDefault(u => u.UserName == Authorization.Instance.CurrentUser.UserName);
                 Sale sale = new Sale();
-                sale.OrderDate = DateTime.Now;
+                sale.OrderDate = DateTime.Now.Date;
                 sale.IsDelivered = false;
                 sale.UserId = user.UserId;
                 Dictionary<string, int> original = new Dictionary<string, int>();
@@ -34,18 +34,19 @@
                     Console.Clear();
                     Console.Write("Enter quantity: ");
                     int quantity = int.Parse(Console.ReadLine());
+                    Console.Clear();
                     if (context.Products.Any(p => p.Name.ToLower() == productName && p.Quantity >= quantity))
                     {
                         Product product = context.Products.FirstOrDefault(p => p.Name.ToLower() == productName);
-                        if (sale.Products.Any(p => p.ProductId == product.ProductId))
+                        if (sale.Products.Any(p => p.Product.ProductId == product.ProductId))
                         {
-                            sale.Products.FirstOrDefault(p => p.ProductId == product.ProductId).OrderedQuantity += quantity;
+                            sale.Products.FirstOrDefault(p => p.Product.ProductId == product.ProductId).OrderedQuantity += quantity;
                             sale.TotalSum += quantity * product.Price;
                         }
                         else
                         {
                             ProductSale proSale = new ProductSale();
-                            proSale.ProductId = product.ProductId;
+                            proSale.Product = product;
                             proSale.OrderedQuantity = quantity;
                             sale.Products.Add(proSale);
                             sale.TotalSum += quantity * product.Price;
@@ -62,6 +63,13 @@
                     productName = Console.ReadLine().ToLower();
                 }
                 Console.Clear();
+                Console.WriteLine("Products you are buying:");
+                foreach(var s in sale.Products)
+                {
+                    Console.WriteLine($"-- name: {s.Product.Name}\n--quantity: {s.OrderedQuantity}");
+                    Console.WriteLine("------------------------");
+                }
+                Console.WriteLine($"Total price: {sale.TotalSum:F2}");
                 Console.Write("Confirm sale (Yes/No): ");
                 string confirm = Console.ReadLine().ToLower();
                 if (confirm == "yes")
