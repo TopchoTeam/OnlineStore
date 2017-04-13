@@ -23,24 +23,24 @@
             string result = string.Empty;
             Console.Clear();
             Console.Write("Enter supplier name: ");
-            string suppliertName = Console.ReadLine().ToLower();
+            string supplierName = Console.ReadLine().ToLower();
             using(OnlineStoreContext context=new OnlineStoreContext())
             {
-                var supplierByName = context.Suppliers.FirstOrDefault(s => s.Name == suppliertName);
+                var supplierByName = context.Suppliers.FirstOrDefault(s => s.Name == supplierName);
                 if (supplierByName != null)
                 {
-                    throw new Exception($"Supplier {suppliertName} already exist in database!");
+                    throw new Exception($"Supplier {supplierName} already exist in database!");
                 }
 
                 Supplier supplier = new Supplier()
                 {
-                    Name = suppliertName
+                    Name = supplierName
                 };
 
                 context.Suppliers.Add(supplier);
                 context.SaveChanges();
 
-                result = $"{suppliertName} was added succesfully to database";
+                result = $"{supplierName} was added succesfully to database";
             }
             return result;
         }
