@@ -13,6 +13,11 @@
 
             switch (command)
             {
+
+                case "supplyproducts":
+                    SupplyProductsCommand supplyProducts = new SupplyProductsCommand();
+                    result = supplyProducts.Execute();
+                    break;
                 case "viewmypurchases":
                     ViewMyPurchasesCommand viewmypurchases = new ViewMyPurchasesCommand();
                     result = viewmypurchases.Execute();

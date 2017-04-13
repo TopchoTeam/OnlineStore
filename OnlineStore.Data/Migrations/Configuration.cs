@@ -20,7 +20,7 @@ namespace OnlineStore.Data.Migrations
            Account accountAdmin = new Account()
             {
                 AccountNumber = "FICB56719534",
-                Balance = 0
+                Balance = 100
             };
             Account account2 = new Account()
             {
