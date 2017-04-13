@@ -1,9 +1,9 @@
 ﻿
 namespace OnlineStore.Client.Core.Commands
 {
-using OnlineStore.Client.Utilities;
-using OnlineStore.Data;
-using OnlineStore.Models;
+using Utilities;
+using Data;
+using Models;
 using System;
 using System.Linq;
     public class DeleteUserCommand
@@ -14,12 +14,12 @@ using System.Linq;
             {
                 throw new InvalidOperationException("You should log in first for this operation");
             }
-            string result = string.Empty;
-            Console.Clear();
             if (Authorization.Instance.CurrentUser.Role != UserRole.Admin)
             {
                 throw new InvalidOperationException("You don't have access to this operation!");
             }
+            string result = string.Empty;
+            Console.Clear();
             Console.Write("Enter UserName you want to delete: ");
             string userName = Console.ReadLine();
             using (OnlineStoreContext context = new OnlineStoreContext())

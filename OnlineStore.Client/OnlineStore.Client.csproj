@@ -65,6 +65,7 @@
     <Compile Include="Core\Commands\ExitCommand.cs" />
     <Compile Include="Core\Commands\ListCommandsCommand.cs" />
     <Compile Include="Core\Commands\ListProductsCommand.cs" />
+    <Compile Include="Core\Commands\ListSalesCommand.cs" />
     <Compile Include="Core\Commands\ListSuppliersCommand.cs" />
     <Compile Include="Core\Commands\LogInCommand.cs" />
     <Compile Include="Core\Commands\LogOutCommand.cs" />

@@ -37,8 +37,8 @@
                 Console.Write("Enter product unit: ");
                 string productUnit = Console.ReadLine();
                 Console.Clear();
-                Console.Write("Enter product quantity: ");
-                int productQuantity = int.Parse(Console.ReadLine());
+                Console.Write("Enter product delivery price: ");
+                decimal deliveryPrice = decimal.Parse(Console.ReadLine());
                 Console.Clear();
                 Console.Write("Enter product supplier: ");
                 string productSupplier = Console.ReadLine().ToLower();
@@ -53,8 +53,9 @@
                     Name = productName,
                     Price = productPrice,
                     Unit = productUnit,
-                    Quantity = productQuantity,
-                    Supplier = supplierByName
+                    Quantity = 0,
+                    Supplier = supplierByName,
+                    DeliveryPrice = deliveryPrice
                 };
                 context.Products.Add(product);
                 context.SaveChanges();
