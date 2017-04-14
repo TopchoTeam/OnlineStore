@@ -17,7 +17,7 @@
                 result += "\nDeleteMyProfile";
                 result += "\nViewMyPurchases";
                 result += "\nListProducts";
-                result += "\nTransferMoney"; //TODO
+                result += "\nTransferMoney"; 
                 if (Authorization.Instance.CurrentUser.Role == UserRole.Admin)
                 {
                     result += "\nAddProduct";
@@ -29,7 +29,7 @@
                     result += "\nEditUser"; 
                     result += "\nDeleteUser";
                     result += "\nListSales"; 
-                    result += "\nSupplyProducts";// TODO
+                    result += "\nSupplyProducts";
                     result += "\nListDeliveries";//TODO
                 }
                 result += "\nLogOut";

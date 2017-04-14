@@ -72,6 +72,7 @@
     <Compile Include="Core\Commands\PurchaseProductsCommand.cs" />
     <Compile Include="Core\Commands\RegisterUserCommand.cs" />
     <Compile Include="Core\Commands\SupplyProductsCommand.cs" />
+    <Compile Include="Core\Commands\TransferMoneyCommand.cs" />
     <Compile Include="Core\Commands\ViewMyPurchasesCommand.cs" />
     <Compile Include="Core\Engine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

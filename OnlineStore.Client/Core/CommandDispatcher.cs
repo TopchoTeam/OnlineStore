@@ -13,6 +13,10 @@
 
             switch (command)
             {
+                case "transfermoney":
+                    TransferMoneyCommand transferMoney = new TransferMoneyCommand();
+                    result = transferMoney.Execute();
+                    break;
                 case "listsales":
                     ListSalesCommand listsales = new ListSalesCommand();
                     result = listsales.Execute();
