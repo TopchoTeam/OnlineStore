@@ -33,17 +33,24 @@
                     {
                         var sales = context.Sales.Where(s => s.UserId == Authorization.Instance.CurrentUser.UserId && s.OrderDate >= startDate && s.OrderDate <= endDate );
 
-                        result += "-------------------------------------";
-                        foreach (var s in sales)
+                        if (sales.Count() == 0)
                         {
-                            result += $"\nDate: {s.OrderDate.Day}/{s.OrderDate.Month}/{s.OrderDate.Year}";
-                            result += "\nProducts:";
-                            foreach (var p in s.Products)
+                            result = $"There are no sales in the time period {start} - {end}!";
+                        }
+                        else
+                        {
+                            result += "-------------------------------------";
+                            foreach (var s in sales)
                             {
-                                result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity}\n--price: {p.Product.Price}";
+                                result += $"\nDate: {s.OrderDate.Day}/{s.OrderDate.Month}/{s.OrderDate.Year}";
+                                result += "\nProducts:";
+                                foreach (var p in s.Products)
+                                {
+                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity}\n--price: {p.Product.Price}";
+                                }
+                                result += $"\nTotal price: {s.TotalSum:F2}";
+                                result += "\n-------------------------------------";
                             }
-                            result += $"\nTotal price: {s.TotalSum:F2}";
-                            result += "\n-------------------------------------";
                         }
                     }
                     break;
@@ -54,17 +61,24 @@
                     {
                         var sales = context.Sales.Where(s => s.UserId == Authorization.Instance.CurrentUser.UserId && s.OrderDate == date);
 
-                        result += "-------------------------------------";
-                        foreach (var s in sales)
+                        if (sales.Count() == 0)
                         {
-                            result += $"\nDate: {s.OrderDate.Day}/{s.OrderDate.Month}/{s.OrderDate.Year}";
-                            result += "\nProducts:";
-                            foreach (var p in s.Products)
+                            result = "There are no sales today!";
+                        }
+                        else
+                        {
+                            result += "-------------------------------------";
+                            foreach (var s in sales)
                             {
-                                result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity}\n--price: {p.Product.Price}";
+                                result += $"\nDate: {s.OrderDate.Day}/{s.OrderDate.Month}/{s.OrderDate.Year}";
+                                result += "\nProducts:";
+                                foreach (var p in s.Products)
+                                {
+                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity}\n--price: {p.Product.Price}";
+                                }
+                                result += $"\nTotal price: {s.TotalSum:F2}";
+                                result += "\n-------------------------------------";
                             }
-                            result += $"\nTotal price: {s.TotalSum:F2}";
-                            result += "\n-------------------------------------";
                         }
                     }
                     break;
@@ -73,17 +87,24 @@
                     {
                         var sales = context.Sales.Where(s => s.UserId == Authorization.Instance.CurrentUser.UserId);
 
-                        result += "-------------------------------------";
-                        foreach (var s in sales)
+                        if (sales.Count() == 0)
                         {
-                            result += $"\nDate: {s.OrderDate.Day}/{s.OrderDate.Month}/{s.OrderDate.Year}";
-                            result += "\nProducts:";
-                            foreach (var p in s.Products)
+                            result = "There are no sales!";
+                        }
+                        else
+                        {
+                            result += "-------------------------------------";
+                            foreach (var s in sales)
                             {
-                                result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity}\n--price: {p.Product.Price}";
+                                result += $"\nDate: {s.OrderDate.Day}/{s.OrderDate.Month}/{s.OrderDate.Year}";
+                                result += "\nProducts:";
+                                foreach (var p in s.Products)
+                                {
+                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity}\n--price: {p.Product.Price}";
+                                }
+                                result += $"\nTotal price: {s.TotalSum:F2}";
+                                result += "\n-------------------------------------";
                             }
-                            result += $"\nTotal price: {s.TotalSum:F2}";
-                            result += "\n-------------------------------------";
                         }
                     }
                     break;

@@ -13,9 +13,15 @@
 
             switch (command)
             {
+<<<<<<< HEAD
                 case "listdeliveries":
                     ListDeliveriesCommand listDeliveries = new ListDeliveriesCommand();
                     result = listDeliveries.Execute();
+=======
+                case "activateuser":
+                    ActivateUserCommand activateuser = new ActivateUserCommand();
+                    result = activateuser.Execute();
+>>>>>>> 48775038131c4d5d87228279db8ff4d0a28fedb6
                     break;
                 case "transfermoney":
                     TransferMoneyCommand transferMoney = new TransferMoneyCommand();

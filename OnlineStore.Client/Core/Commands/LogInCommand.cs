@@ -14,6 +14,7 @@
             Console.Clear();
             Console.Write("Enter password: ");
             string password = Console.ReadLine();
+            Console.Clear();
 
             Authorization.Instance.Login(username, password);
 
