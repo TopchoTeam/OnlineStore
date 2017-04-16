@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Application.cs" />
     <Compile Include="Core\CommandDispatcher.cs" />
+    <Compile Include="Core\Commands\ActivateUserCommand.cs" />
     <Compile Include="Core\Commands\AddProductCommand.cs" />
     <Compile Include="Core\Commands\AddSupplierCommand.cs" />
     <Compile Include="Core\Commands\DeleteMyProfileCommand.cs" />
