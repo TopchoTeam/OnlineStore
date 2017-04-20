@@ -30,7 +30,7 @@
                     result += "\nDeleteUser";
                     result += "\nListSales"; 
                     result += "\nSupplyProducts";
-                    result += "\nListDeliveries";//TODO
+                    result += "\nListDeliveries";
                 }
                 result += "\nLogOut";
                 result += "\nExit";

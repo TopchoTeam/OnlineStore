@@ -150,7 +150,7 @@ namespace OnlineStore.Data.Migrations
                 Name = "bread Simid",
                 Price = 0.98m,
                 Quantity = 5,
-                Unit = "prs",
+                Unit = "pcs",
                 DeliveryPrice=0.95m,
                 SupplierId = simid.SupplierId
             };
