@@ -24,7 +24,6 @@
             Console.WriteLine("Tip: search parameters are: SpecificTimePeriod/Today/ByCustomer/ByProduct/All");
             Console.Write("Enter search parameter: ");
             string par = Console.ReadLine().ToLower();
-
             switch (par)
             {
                 case "specifictimeperiod":
@@ -43,6 +42,7 @@
                         {
                             result = $"There are no sales in the time period {start} - {end}!";
                         }
+                        // TODO add p.Unit
                         else
                         {
                             result += "-------------------------------------";
@@ -53,7 +53,7 @@
                                 result += "\nProducts:";
                                 foreach (var p in s.Products)
                                 {
-                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity}\n--price: {p.Product.Price}";
+                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity} {p.Product.Unit}\n--price: {p.Product.Price}";
                                 }
                                 result += $"\nTotal price: {s.TotalSum:F2}";
                                 result += $"\nProfit: {s.Profit:F2}";
@@ -83,7 +83,7 @@
                                 result += "\nProducts:";
                                 foreach (var p in s.Products)
                                 {
-                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity}\n--price: {p.Product.Price}";
+                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity} {p.Product.Unit}\n--price: {p.Product.Price}";
                                 }
                                 result += $"\nTotal price: {s.TotalSum:F2}";
                                 result += $"\nProfit: {s.Profit:F2}";
@@ -111,7 +111,7 @@
                                 result += "\nProducts:";
                                 foreach (var p in s.Products)
                                 {
-                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity}\n--price: {p.Product.Price}";
+                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity} {p.Product.Unit}\n--price: {p.Product.Price}";
                                 }
                                 result += $"\nTotal price: {s.TotalSum:F2}";
                                 result += $"\nProfit: {s.Profit:F2}";
@@ -147,7 +147,7 @@
                                 result += "\nProducts:";
                                 foreach (var p in s.Products)
                                 {
-                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity}\n--price: {p.Product.Price}";
+                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity} {p.Product.Unit}\n--price: {p.Product.Price}";
                                 }
                                 result += $"\nTotal price: {s.TotalSum:F2}";
                                 result += $"\nProfit: {s.Profit:F2}";
@@ -183,7 +183,7 @@
                                 result += "\nProducts:";
                                 foreach (var p in s.Products)
                                 {
-                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity}\n--price: {p.Product.Price}";
+                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity} {p.Product.Unit}\n--price: {p.Product.Price}";
                                 }
                                 result += $"\nTotal price: {s.TotalSum:F2}";
                                 result += $"\nProfit: {s.Profit:F2}";

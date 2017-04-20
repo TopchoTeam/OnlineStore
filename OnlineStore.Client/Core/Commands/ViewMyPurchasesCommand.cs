@@ -46,7 +46,7 @@
                                 result += "\nProducts:";
                                 foreach (var p in s.Products)
                                 {
-                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity}\n--price: {p.Product.Price}";
+                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity} {p.Product.Unit}\n--price: {p.Product.Price}";
                                 }
                                 result += $"\nTotal price: {s.TotalSum:F2}";
                                 result += "\n-------------------------------------";
@@ -74,7 +74,7 @@
                                 result += "\nProducts:";
                                 foreach (var p in s.Products)
                                 {
-                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity}\n--price: {p.Product.Price}";
+                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity} {p.Product.Unit}\n--price: {p.Product.Price}";
                                 }
                                 result += $"\nTotal price: {s.TotalSum:F2}";
                                 result += "\n-------------------------------------";
@@ -100,7 +100,7 @@
                                 result += "\nProducts:";
                                 foreach (var p in s.Products)
                                 {
-                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity}\n--price: {p.Product.Price}";
+                                    result += $"\n--name: {p.Product.Name}\n--quantity: {p.OrderedQuantity} {p.Product.Unit}\n--price: {p.Product.Price}";
                                 }
                                 result += $"\nTotal price: {s.TotalSum:F2}";
                                 result += "\n-------------------------------------";
